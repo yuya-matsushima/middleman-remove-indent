@@ -1,7 +1,7 @@
+require "middleman-core"
 require "middleman-remove-indention/version"
 
-module Middleman
-  module RemoveIndention
-    # Your code goes here...
-  end
+::Middleman::Extensions.register(:remove_indention) do
+  require "middleman-remove-indention/extension"
+  ::Middleman::RemoveIndention::Extension
 end
