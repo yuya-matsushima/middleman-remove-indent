@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'middleman-removeindention/version'
+require 'middleman-remove-indention/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "middleman-removeindention"
-  spec.version       = Middleman::Removeindention::VERSION
+  spec.name          = "middleman-remove-indention"
+  spec.version       = Middleman::RemoveIndention::VERSION
   spec.authors       = ["yterajima"]
   spec.email         = ["terra@e2esound.com"]
   spec.summary       = %q{Remove Indention from build files}

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in middleman-removeindention.gemspec
+# Specify your gem's dependencies in middleman-remove-indention.gemspec
 gemspec
