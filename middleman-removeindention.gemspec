@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Middleman::Removeindention::VERSION
   spec.authors       = ["yterajima"]
   spec.email         = ["terra@e2esound.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Remove Indention from build files}
+  spec.description   = %q{Remove Indention from build files}
+  spec.homepage      = "https://github.com/yterajima/middleman-slim"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,6 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "middleman", "~>3.3"
+
+  spec.add_development_dependency "cucumber", "~> 1.3"
+  spec.add_development_dependency "aruba", "~> 0.6"
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end
