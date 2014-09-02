@@ -7,8 +7,8 @@ module Middleman
       def initialize(app, options_hash = {}, &block)
         super
 
+        exts = (options.exts.is_a?(String)) ? Array(options.exts) : options.exts
         build_dir = File.join(app.root, app.build_dir)
-        exts      = options.exts
         extension = self
 
         app.after_build do
