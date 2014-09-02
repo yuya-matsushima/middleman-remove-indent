@@ -1,6 +1,6 @@
 # Middleman::RemoveIndent
 
-[![Gem Version](https://badge.fury.io/rb/middleman-remove-indent.svg)][gem]
+[![Gem Version](https://badge.fury.io/rb/middleman-remove-indent.svg)](http://badge.fury.io/rb/middleman-remove-indent)
 [![Build Status](https://travis-ci.org/yterajima/middleman-remove-indent.svg?branch=master)](https://travis-ci.org/yterajima/middleman-remove-indent)
 
 `middleman-remove-indent' remove indent from build files (ex: .html, .css).
