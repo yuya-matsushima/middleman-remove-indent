@@ -32,13 +32,13 @@ Then `middleman-remove-indent` remove indent from `build/\*.html`, `build/\*.css
 if you want to remove indent only `.html`, you could do with `:exts` option:
 
     configure :build do
-      activate :remove_indent, :exts => %(.html) #  default is %(.html .css)
+      activate :remove_indent, :exts => %w(.html) # default:  %w(.html .css)
     end
 
 if you want to remove BLANK LINE too, you could do with `:remove_blank_line' option:
 
     configure :build do
-      activate :remove_indent, :remove_blank_line => true # default is false
+      activate :remove_indent, :remove_blank_line => true # default: false
     end
 
 ## Contributing
