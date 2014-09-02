@@ -1,1 +1,1 @@
-require "middleman-remove-indention"
+require "middleman-remove-indent"

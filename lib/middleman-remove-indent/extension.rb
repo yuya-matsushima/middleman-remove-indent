@@ -1,5 +1,5 @@
 module Middleman
-  module RemoveIndention
+  module RemoveIndent
     class Extension < ::Middleman::Extension
       option :exts, %w(.html .css), 'List of target file extensions'
       option :remove_blank_line, false, 'Remove Brank Line from target files'
@@ -30,7 +30,7 @@ module Middleman
           open(file) do |f|
             data = []
             f.each_line do |line|
-              line = remove_indention(line)
+              line = remove_indent(line)
               data.push(line)
             end
             File.write(file, data.join)
@@ -38,7 +38,7 @@ module Middleman
         end
       end
 
-      def remove_indention(line)
+      def remove_indent(line)
         line.gsub!(/^(\s|\t)+/, '')
         (line.empty? && !options.remove_blank_line) ? "\n" : line
       end

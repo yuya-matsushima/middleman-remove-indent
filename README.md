@@ -1,12 +1,12 @@
-# Middleman::RemoveIndention
+# Middleman::RemoveIndent
 
-`middleman-remove-indention' remove indention from build files (ex: .html, .css).
+`middleman-remove-indent' remove indent from build files (ex: .html, .css).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'middleman-remove-indention'
+    gem 'middleman-remove-indent'
 
 And then execute:
 
@@ -14,33 +14,33 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install middleman-remove-indention
+    $ gem install middleman-remove-indent
 
 ## Usage
 
 In `config.rb`:
 
     configure :build do
-      activate :remove_indention
+      activate :remove_indent
     end
 
-Then `middleman-remove-indention` remove indention from `build/\*.html`, `build/\*.css`.
+Then `middleman-remove-indent` remove indent from `build/\*.html`, `build/\*.css`.
 
-if you want to remove indention only `.html`, you could do with `:exts` option:
+if you want to remove indent only `.html`, you could do with `:exts` option:
 
     configure :build do
-      activate :remove_indention, :exts => %(.html) #  default is %(.html .css)
+      activate :remove_indent, :exts => %(.html) #  default is %(.html .css)
     end
 
 if you want to remove BLANK LINE too, you could do with `:remove_blank_line' option:
 
     configure :build do
-      activate :remove_indention, :remove_blank_line => true # default is false
+      activate :remove_indent, :remove_blank_line => true # default is false
     end
 
 ## Contributing
 
-1. Fork it ( http://github.com/yterajima/middleman-remove-indention/fork )
+1. Fork it ( http://github.com/yterajima/middleman-remove-indent/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
