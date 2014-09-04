@@ -8,7 +8,7 @@ module Middleman
         super
 
         exts = (options.exts.is_a?(String)) ? Array(options.exts) : options.exts
-        build_dir = File.join(app.root, app.build_dir)
+        build_dir = app.build_dir
         extension = self
 
         app.after_build do
@@ -45,3 +45,4 @@ module Middleman
     end
   end
 end
+
