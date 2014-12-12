@@ -3,26 +3,26 @@
 [![Gem Version](https://badge.fury.io/rb/middleman-remove-indent.svg)](http://badge.fury.io/rb/middleman-remove-indent)
 [![Build Status](https://travis-ci.org/yterajima/middleman-remove-indent.svg?branch=master)](https://travis-ci.org/yterajima/middleman-remove-indent)
 
-`middleman-remove-indent` is an extension of [Middleman](http://middlemanapp.com/).  
-This extension remove indent from build files (ex: .html, .css).
+`middleman-remove-indent` は [Middleman](http://middlemanapp.com/) の拡張機能です。  
+この拡張機能は build したファイル (例: .html, .css) からインデントを削除します。
 
-## Installation
+## インストール 
 
-Add this line to your application's Gemfile:
+Gemfile に次の行を追加してください:
 
     gem 'middleman-remove-indent'
 
-And then execute:
+コマンドを実行します:
 
     $ bundle
 
-Or install it yourself as:
+Gemfile を使わずにインストールする場合は次のコマンドを実行してください:
 
     $ gem install middleman-remove-indent
 
-## Usage
+## 使い方
 
-In `config.rb`:
+`config.rb` に記述します:
 
 ```ruby
 configure :build do
@@ -30,8 +30,8 @@ configure :build do
 end
 ```
 
-Then `middleman-remove-indent` remove indent from `build/\*.html`, `build/\*.css`.  
-if you want to remove indent only `.html`, you could change `:exts` option:
+この場合, `middleman-remove-indent` は `build/*.html` と `build/*.css` に該当するファイルからインデントを削除します。  
+`*.html` ファイルのみインデントを削除したい場合には, `:exts` オプションを変更します:
 
 ```ruby
 configure :build do
@@ -39,7 +39,7 @@ configure :build do
 end
 ```
 
-if you want to remove BLANK LINE too, you could do with `:remove_blank_line' option:
+さらに, `build` 後のファイルから空行を削除したい場合, `:remove_blank_line` オプションを利用できます:
 
 ```ruby
 configure :build do
