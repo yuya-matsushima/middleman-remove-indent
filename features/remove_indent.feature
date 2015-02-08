@@ -30,6 +30,23 @@ Feature: Middleman-Remove-indent
     And the file "stylesheets/all.css" should match /^\.doc:before/
     And the file "stylesheets/all.css" should not match /^\n/
 
+  Scenario: With ':remove_blank_line' option using block
+    Given a fixture app "basic-app"
+    And a file named "config.rb" with:
+      """
+      configure :build do
+        activate :remove_indent do |r|
+          r.remove_blank_line = true
+        end
+      end
+      """
+    And a successfully built app at "basic-app"
+    When I cd to "build"
+    Then the file "index.html" should match /^<head>/
+    And the file "index.html" should not match /^\n/
+    And the file "stylesheets/all.css" should match /^\.doc:before/
+    And the file "stylesheets/all.css" should not match /^\n/
+
   Scenario: Remove indent only html with :exts option
     Given a fixture app "basic-app"
     And a file named "config.rb" with:
