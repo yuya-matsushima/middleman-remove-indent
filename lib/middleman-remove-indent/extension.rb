@@ -1,15 +1,16 @@
 module Middleman
   module RemoveIndent
+    # Middleman Remove Indent Extension
     class Extension < ::Middleman::Extension
       option :exts, %w(.html .css), 'List of target file extensions'
       option :remove_blank_line, false, 'Remove Brank Line from target files'
 
       def initialize(app, options_hash = {}, &block)
         super
-
-        exts = (options.exts.is_a?(String)) ? Array(options.exts) : options.exts
-        build_dir = app.build_dir
         extension = self
+        build_dir = app.build_dir
+        exts      = options.exts
+        exts      = Array(exts) if exts.instance_of? String
 
         app.after_build do
           targets = extension.target_files(build_dir, exts)
@@ -45,4 +46,3 @@ module Middleman
     end
   end
 end
-
