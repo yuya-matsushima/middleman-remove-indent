@@ -1,6 +1,6 @@
 module Middleman
   # Middleman RemoveIndent Module
   module RemoveIndent
-    VERSION = '1.0.1'
+    VERSION = '1.1.0'
   end
 end
