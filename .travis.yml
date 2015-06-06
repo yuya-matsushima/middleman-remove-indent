@@ -1,19 +1,22 @@
 language: ruby
-script: bundle exec cucumber
+sudo: false
 rvm:
 - ruby-head
 - jruby-head
-- jruby-19mode
 - 2.2
 - 2.1
 - 2.0
-- 1.9.3
 os:
 - linux
 - osx
-env: TEST=true TRAVIS=true
-gemfile:
-- Gemfile
+matrix:
+  fast_finish: true
+  allow_failures:
+  - rvm: ruby-head
+  - rvm: jruby-head
+script: bundle exec rake test
+cache: bundler
+env: TEST=true
 notifications:
   slack:
     secure: gY/P/bRQZPcFK3TuakmJg9GwDXRKC0FIsM/Lp+hJ6yC1qgvmq1IL7jrcUySXpmy62i7R8/nT9mT6bqln2PjNLtUydd0NR/p/fpxeZaRsVTHXA0hMaAfpngh3nhHQRoF1cHAveSJgUCe7gT8RDD6ste+U5bx+Yp3i3aWq34C++lo=
