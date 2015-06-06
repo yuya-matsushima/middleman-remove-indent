@@ -8,7 +8,7 @@ module Middleman
       def initialize(app, options_hash = {}, &block)
         super
         extension = self
-        build_dir = app.build_dir
+        build_dir = app.config.build_dir
         exts      = options.exts
         exts      = Array(exts) if exts.instance_of? String
 
